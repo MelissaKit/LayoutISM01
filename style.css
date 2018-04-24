@@ -1,0 +1,459 @@
+header {
+    height: 15%;
+    background-color: rgb(255, 198, 0);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Avenir-Black;
+}
+
+main {
+    height: 200%;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/*      header      */
+header > div:first-child {
+    display: flex;
+    width: 85%;
+    height: 65%;
+    margin: 0 auto;
+}
+
+.top-menu > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+option[value="hide"] {
+    display: none;
+}
+
+.top-menu > div > input[type="text"] {
+    width: 40%;
+    background: url("Images/search.png") white no-repeat 98% center;
+    color: black;
+}
+
+.top-menu > div > input.Inloggen {
+    background: url("Images/prof.png") white no-repeat 5% center;
+    color: black;
+}
+
+header div div input::placeholder {
+    padding-left: 3%;
+}
+
+.top-menu > div > input, .top-menu > div > select {
+    width: 8%;
+    height: 65%;
+    border-radius: 2px;
+    background-color: black;
+    color: white;
+    border: none;
+    box-shadow: 0 3px 3px -3px black;
+    font-size: 10pt;
+}
+
+.top-menu > div > select.product, .top-menu > div > img {
+    width: 13%;
+}
+
+.top-menu > div > select.card {
+    background: url("Images/card.png") black no-repeat center center;
+}
+
+.top-menu > div > img {
+    height: 75%;
+}
+
+header > div:last-child {
+    display: flex;
+    width: 67%;
+    height: 35%;
+    margin: 0 33%;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/*      first-block     */
+.left-side-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.left-side-menu li, footer div li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.group-one nav {
+    height: 100%;
+}
+
+.group-one {
+    height: 37%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-one > div:first-child {
+    width: 25%;
+    height: 100%;
+}
+
+.group-one > div:last-child {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-content > div:first-child > div:first-child span {
+    padding: 5%;
+}
+
+.right-content > div:last-child > div span {
+    padding: 15% 8%;
+}
+
+.right-content > div:last-child input {
+    top: 55%;
+    left: 8%;
+}
+
+.right-content > div {
+    width: 100%;
+    height: 49%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.right-content > div > div {
+    background-color: rgb(245, 245, 245);
+    width: 49.35%;
+    height: 100%;
+    display: flex;
+    position: relative
+}
+
+.right-content > div:first-child > div:first-child {
+    width: 62.35%;
+}
+
+.right-content > div > div input {
+    height: 50px;
+    width: 85px;
+    display: block;
+    top: 50%;
+    left: 5%;
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+
+.right-content > div > div img {
+    display: block;
+    position: absolute;
+}
+
+.right-content > div:first-child > div:last-child {
+    width: 36.35%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.right-content > div:first-child > div:last-child > div {
+    width: 95%;
+    padding-left: 5%;
+}
+
+.schedule ul {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.schedule ul:first-child li {
+    padding: 0 1em 0 2em;
+}
+
+.schedule {
+    display: flex;
+}
+
+.headphones {
+    height: 60%;
+    width: 30%;
+    top: 20%;
+    right: 5%;
+}
+
+.sander {
+    height: 35%;
+    width: 35%;
+    top: 30%;
+    right: 7%;
+}
+
+.detector {
+    height: 40%;
+    width: 27%;
+    top: 30%;
+    right: 10%;
+}
+
+/*      second-block        */
+.group-two {
+    height: 25%;
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    position: relative;
+}
+
+.group-two > div:first-child {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    height: 80%;
+    border-collapse: collapse;
+}
+
+.row {
+    display: table-row;
+    height: 100%;
+}
+
+.row div {
+    display: table-cell;
+    width: 20%;
+    border: 1px solid lightgrey;
+    border-bottom: 1px solid transparent;
+    position: relative;
+}
+
+.row div:first-child {
+    border-left: 1px solid transparent;
+}
+
+.row div:last-child {
+    border-right: 1px solid transparent;
+}
+
+.group-two button {
+    background-color: rgb(255, 197, 0);
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50%;
+    width: 4%;
+    height: 13%;
+    position: absolute;
+}
+
+.prev {
+    left: -2.5%;
+    top: 50%;
+    font-weight: bolder;
+}
+
+.next {
+    right: -2.5%;
+    top: 50%;
+    font-weight: bolder;
+}
+
+.slider > div > div:first-child {
+    height: 45%;
+}
+
+.slider > div > div {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    justify-content: flex-end;
+}
+
+.slider ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/*      third-block     */
+
+.group-three {
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.group-three > div {
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.group-three > div > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.group-three > div > span {
+    position: absolute;
+    color: white;
+    padding: 1.5%;
+}
+
+/*      footer      */
+footer {
+    background-color: rgb(245, 245, 245);
+    height: 47%;
+    width: 100%;
+}
+
+footer > div:first-child {
+    height: 85%;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+}
+
+footer > div:last-child {
+    height: 15%;
+    background-color: white;
+}
+
+footer > div:first-child > div:nth-child(n+1) {
+    width: 25%;
+}
+
+footer > div ul {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+footer > div:last-child > div {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div dl {
+    padding: 7% 0 0;
+}
+
+footer div dd {
+    margin: 0;
+}
+
+footer div dt {
+    padding-bottom: 3%;
+}
+
+footer div div {
+    display: flex;
+    justify-content: flex-start;
+}
+
+footer div div:nth-child(n+2) {
+    display: flex;
+    justify-content: center;
+}
+
+footer div div input::placeholder, header div div input::placeholder, input, select {
+    font-family: Avenir-Black;
+    font-size: 11pt;
+    color: rgb(170, 170, 170);
+}
+
+footer div div input {
+    padding: 7%;
+    margin: 5% 0 0;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 3%;
+}
+
+footer div div input[type="button"] {
+    width: 114%;
+    border: 1px solid black;
+    background-color: black;
+    border-radius: 3%;
+}
+
+footer div div:last-child img {
+    width: 90%;
+    height: 60%;
+    margin: 20% 0 0 10%;
+}
+
+.stars {
+    color: gold;
+}
+
+/*      Fonts       */
+
+@font-face {
+    font-family: Avenir-Black;
+    src: url(Fonts/Avenir-Black.woff);
+}
+
+.f-bigger {
+    font-size: 28pt;
+}
+
+.f-big {
+    font-size: 24pt;
+}
+
+.f-smaller {
+    font-size: 10pt;
+}
+
+.f-small {
+    font-size: 12pt;
+}
+
+.f-medium {
+    font-size: 18pt;
+}
+
+
+
+
