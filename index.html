@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>Balie</title>
     <link rel="stylesheet" href="style.css">
-    <script async src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body>
 <header>
@@ -22,14 +23,14 @@
         </div>
     </div>
     <div class="f-smaller site-info">
-        <p><img src="Images/like.png"> Uitstekende klantenservice <img src="Images/car.png"> Gratis levering of afhalen
-            in onze shops <img src="Images/phone.png"> Gratis
+        <p><img src="Images/like.png" class="sign"> Uitstekende klantenservice <img src="Images/car.png" class="sign"> Gratis levering of afhalen
+            in onze shops <img src="Images/phone.png" class="sign"> Gratis
             levering of afhalen in onze shops</p>
     </div>
 </header>
 <main>
     <div class="group-one">
-        <div>
+        <div class="menu-container">
             <nav class="left-side-menu">
                 <ul class="f-small">
                     <li><a href="#">Behuizinger</a></li>
@@ -51,13 +52,17 @@
             </nav>
         </div>
         <div class="right-content">
-            <div>
-                <div>
-                    <span class="f-big">Gehoorbescherming 20% korting</span>
-                    <input type="button" value="Bestel nu">
-                    <img src="Images/headphones.png" class="headphones">
+            <div class="row-one">
+                <div class="block-one">
+                    <div>
+                        <span class="f-big">Gehoorbescherming 20% korting</span>
+                        <input type="button" value="Bestel nu">
+                    </div>
+                    <div class="imageContainer">
+                        <img src="Images/headphones.png" class="headphones">
+                    </div>
                 </div>
-                <div class="f-small">
+                <div class="f-small block-two">
                     <div>
                         <div class="schedule">
                             <ul>
@@ -67,7 +72,7 @@
                         </div>
                     </div>
                     <div>
-                        <span>&#128336 Openingstijden:</span>
+                        <span><img src="Images/clock%20.png" class="sign"> Openingstijden:</span>
                         <div class="schedule">
                             <ul>
                                 <li>Ma-Vr</li>
@@ -80,7 +85,7 @@
                         </div>
                     </div>
                     <div>
-                        <span> &#128222 Telefonisch bereikbaar:</span>
+                        <span><img src="Images/phone.png" class="sign"> Telefonisch bereikbaar:</span>
                         <div class="schedule">
                             <ul>
                                 <li>Ma-Vr</li>
@@ -94,99 +99,118 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <div>
-                    <span class="f-medium">Schuurmachines Vanaf € 150,-</span>
-                    <input type="button" value="Bestel nu">
-                    <img src="Images/sander.png" class="sander">
+            <div class="row-two">
+                <div class="block-three">
+                    <div>
+                        <span class="f-medium">Schuurmachines Vanaf € 150,-</span>
+                        <input type="button" value="Bestel nu">
+                    </div>
+                    <div class="imageContainer">
+                        <img src="Images/sander.png" class="sander">
+                    </div>
                 </div>
-                <div>
-                    <span class="f-medium">Rookmelders Vanaf € 50,-</span>
-                    <input type="button" value="Bestel nu">
-                    <img src="Images/smoke%20detectors.png" class="detector">
+                <div class="block-four">
+                    <div>
+                        <span class="f-medium">Rookmelders Vanaf € 50,-</span>
+                        <input type="button" value="Bestel nu">
+                    </div>
+                    <div class="imageContainer">
+                        <img src="Images/smoke%20detectors.png" class="detector">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="group-two">
         <div>
-            <div class="f-big">Bestsellers</div>
+            <div class="f-big title">Bestsellers</div>
         </div>
-        <button class="prev f-bigger">&#60</button>
-        <div class="table">
-            <div class="row slider">
-                <div>
-                    <div>
-                        <img src="Images/sander.png">
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="f-small">Schuurmachine FERM Ak450970</li>
-                            <li class="f-bigger">€ 150,-</li>
-                        </ul>
-                    </div>
+        <div class="slider">
+            <div class="slide sender-slide">
+                <div class="image">
+                    <img src="Images/sander.png">
                 </div>
-                <div>
-                    <div>
-                        <img src="Images/smoke%20detectors.png">
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="f-small">Rookmelder Special Ak450970</li>
-                            <li class="f-bigger">€ 50,-</li>
-                        </ul>
-                    </div>
+                <div class="text">
+                    <ul>
+                        <li class="f-small">Schuurmachine FERM Ak450970</li>
+                        <li class="f-bigger">€ 150,-</li>
+                    </ul>
                 </div>
-                <div>
-                    <div>
-                        <img src="Images/sander.png">
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="f-small">Schuurmachine FERM Ak450970</li>
-                            <li class="f-bigger">€ 150,-</li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="slide detector-slide">
+                <div class="image">
+                    <img src="Images/smoke%20detectors.png">
                 </div>
-                <div>
-                    <div>
-                        <img src="Images/smoke%20detectors.png">
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="f-small">Rookmelder Special Ak450970</li>
-                            <li class="f-bigger">€ 50,-</li>
-                        </ul>
-                    </div>
+                <div class="text">
+                    <ul>
+                        <li class="f-small">Rookmelder Special Ak450970</li>
+                        <li class="f-bigger">€ 50,-</li>
+                    </ul>
                 </div>
-                <div>
-                    <div>
-                        <img src="Images/sander.png">
-                    </div>
-                    <div>
-                        <ul>
-                            <li class="f-small">Schuurmachine FERM Ak450970</li>
-                            <li class="f-bigger">€ 150,-</li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="slide sender-slide">
+                <div class="image">
+                    <img src="Images/sander.png">
+                </div>
+                <div class="text">
+                    <ul>
+                        <li class="f-small">Schuurmachine FERM Ak450970</li>
+                        <li class="f-bigger">€ 150,-</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide detector-slide">
+                <div class="image">
+                    <img src="Images/smoke%20detectors.png">
+                </div>
+                <div class="text">
+                    <ul>
+                        <li class="f-small">Rookmelder Special Ak450970</li>
+                        <li class="f-bigger">€ 50,-</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide sender-slide">
+                <div class="image">
+                    <img src="Images/sander.png">
+                </div>
+                <div class="text">
+                    <ul>
+                        <li class="f-small">Schuurmachine FERM Ak450970</li>
+                        <li class="f-bigger">€ 150,-</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="slide detector-slide">
+                <div class="image">
+                    <img src="Images/smoke%20detectors.png">
+                </div>
+                <div class="text">
+                    <ul>
+                        <li class="f-small">Rookmelder Special Ak450970</li>
+                        <li class="f-bigger">€ 50,-</li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <button class="next f-bigger">&#62</button>
     </div>
     <div class="group-three">
-        <div>
-            <img src="Images/Foto2.png">
-            <span><span class="f-bigger">Nachtbezorging</span>Vandaag besteld vannacht al in huis</span>
+        <div class="poster-one">
+            <div class="label">
+                <div class="f-bigger">Nachtbezorging</div>
+                <div class="f-small">Vandaag besteld vannacht al in huis</div>
+            </div>
         </div>
-        <div>
-            <img src="Images/Foto1.png">
-            <span><span class="f-bigger">Nachtbezorging</span>Vandaag besteld vannacht al in huis</span>
+        <div class="poster-two">
+            <div class="label">
+                <div class="f-bigger">Nachtbezorging</div>
+                <div class="f-small">Vandaag besteld vannacht al in huis</div>
+            </div>
         </div>
     </div>
 </main>
 <footer>
-    <div>
+    <div class="footer-content">
         <div>
             <dl class="f-small">
                 <dt class="f-medium">Over InstallatieBalie.nl</dt>
@@ -220,12 +244,21 @@
             <img src="Images/logo.png">
         </div>
     </div>
-    <div>
-        <div>
-            <p class="f-smaller">Algemene voorwarden | Privacy | Cookies | Disclaimer</p>
-            <p class="f-smaller"><span class="stars">&#9733&#9733&#9733&#9733&#9733</span> 1.011 beoordelingen</p>
+    <div class="footer-end">
+        <div class="end-content">
+            <div>
+                <p class="f-small">Algemene voorwarden | Privacy | Cookies | Disclaimer</p>
+            </div>
+            <div>
+                <p class="f-small"><img src="Images/stars.png" class="sign">1.011 beoordelingen</p>
+            </div>
         </div>
     </div>
 </footer>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
