@@ -518,7 +518,7 @@ footer .footer-end {
 }
 
 .footer-end p {
-    margin: 10px;
+    margin: 10px 0;
 }
 
 footer input::placeholder, header input::placeholder, input, select {
