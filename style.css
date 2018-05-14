@@ -9,6 +9,7 @@ html, body {
     padding: 0;
     font-family: Avenir-Black;
     min-width: 100%;
+    font-weight: bold;
 }
 
 main {
@@ -51,6 +52,12 @@ header .top-menu {
 .top-menu .buttons-container select {
     -moz-appearance: none; /* Firefox */
     -webkit-appearance: none; /* Safari and Chrome */
+    -o-appearance: none;
+    appearance: none;
+}
+
+.top-menu .buttons-container select::-ms-expand {
+    display: none;
 }
 
 .top-menu .logo {
@@ -91,10 +98,6 @@ header .top-menu {
     width: 13.5%;
     color: white;
     background: url("Images/arrow.png") black no-repeat 95% center;
-}
-
-option[value="hide"] {
-    display: none;
 }
 
 .top-menu .buttons-container select.card {
@@ -265,11 +268,12 @@ header .site-info {
     flex-direction: column;
 }
 
-.block-three div.imageContainer{
+.block-three div.imageContainer {
     width: 40%;
     padding: 0;
 }
-.block-four div.imageContainer{
+
+.block-four div.imageContainer {
     width: 38%;
     padding: 0;
 }
@@ -301,24 +305,24 @@ header .site-info {
     padding: 10px 0 10px 2.3%;
 }
 
-.slider .slick-prev::before , .slider .slick-next::before{
+.slider .slick-prev::before, .slider .slick-next::before {
     content: ' ';
 }
 
-.slider button.slick-prev, button.slick-next{
+.slider button.slick-prev, button.slick-next {
     width: 40px;
     height: 40px;
 }
 
-.slider button.slick-prev:hover , button.slick-next:hover{
+.slider button.slick-prev:hover, button.slick-next:hover {
 }
 
-.slider button.slick-prev{
-    background: url("Images/arrowPrev.png") no-repeat ;
+.slider button.slick-prev {
+    background: url("Images/arrowPrev.png") no-repeat;
 }
 
-.slider button.slick-next{
-    background: url("Images/arrowNext.png") no-repeat ;
+.slider button.slick-next {
+    background: url("Images/arrowNext.png") no-repeat;
 }
 
 .slider ul {
@@ -328,46 +332,46 @@ header .site-info {
     text-decoration: none;
 }
 
-.slider ul li:first-child{
+.slider ul li:first-child {
     padding-bottom: 5px;
 }
 
-.slider{
+.slider {
     width: 100%;
     border-top: 1px solid #e7e7e7;
     display: flex;
 }
 
-.slide{
+.slide {
     vertical-align: center;
-    padding: 35px 0 10px 0 ;
+    padding: 35px 0 10px 0;
     border-right: 1px solid #e7e7e7;
 }
 
-.sender-slide{
+.sender-slide {
     border-right: 1px solid #e7e7e7;
     border-left: 1px solid #e7e7e7;
 }
 
-.slider div.slick-current .slide{
+.slider div.slick-current .slide {
     border-left: none;
 }
 
-.slider div[aria-hidden="true"] .slide{
+.slider div[aria-hidden="true"] .slide {
     border: none;
 }
 
-.image, .text{
+.image, .text {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.sender-slide ul{
+.sender-slide ul {
     width: 66%;
 }
 
-.detector-slide ul{
+.detector-slide ul {
     width: 60%;
 }
 
@@ -385,28 +389,25 @@ header .site-info {
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
 }
 
-div[class^="poster"] .label{
+div[class^="poster"] .label {
     padding: 15px 0 0 4.5%;
     color: white;
     width: 100%;
 }
 
-div[class^="poster"] .label .f-small{
+div[class^="poster"] .label .f-small {
     margin-top: -5px;
 }
 
-.group-three .poster-one{
+.group-three .poster-one {
     background: url("Images/Foto2.png") no-repeat;
     background-size: cover;
 }
 
-.group-three .poster-two{
+.group-three .poster-two {
     background: url("Images/Foto1.png") no-repeat;
     background-size: cover;
 }
-
-
-
 
 /*      footer      */
 footer {
@@ -414,8 +415,9 @@ footer {
     width: 100%;
 }
 
-footer .footer-content, .end-content{
+footer .footer-content, .end-content {
     width: 85%;
+    min-width: 800px;
     max-width: 1110px;
     margin: 0 auto;
     display: flex;
@@ -423,25 +425,114 @@ footer .footer-content, .end-content{
     justify-content: space-between;
 }
 
-footer .footer-end{
+footer .footer-content{
+    align-items: flex-start;
+    padding-bottom: 30px;
+}
+
+.footer-content .footer-logo{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+div[class^="footer-column"]
+{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 25px;
+}
+
+.footer-column-1{
+    width: 30%;
+}
+
+.footer-column-2{
+    width: 23.5%;
+}
+
+.footer-column-3{
+    width: 27%;
+}
+
+.footer-column-4{
+    width: 19.5%;
+}
+
+.footer-logo div{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.footer-logo .s-bigger{
+    width:135px;
+    max-width: 100%;
+}
+
+.footer-logo .s-smaller{
+    width:60px;
+    max-width: 100%;
+}
+
+.empty{
+    width: 14%;
+}
+
+.footer-logo .first-logos{
+    padding-bottom: 10px;
+}
+
+.footer-column-3 dl, .footer-column-3 dd{
+    width: 100%;
+}
+
+.footer-column-3 input{
+    padding: 11px 4%;
+    border: none;
+    border-radius: 3px;
+    width: 76%;
+    margin-bottom: 5px;
+ }
+
+.footer-column-3 input[type="button"]{
+    width: 84%;
+    color: white;
+    background-color: black;
+}
+
+footer .footer-end {
     width: 100%;
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
-.footer-end p{
+.footer-content dd{
+    margin: 0;
+}
+
+.footer-content dt{
+    padding-bottom: 5px;
+}
+
+.footer-end p {
     margin: 10px;
 }
 
-
-footer div div input::placeholder, header div div input::placeholder, input, select {
+footer input::placeholder, header input::placeholder, input, select {
     font-family: Avenir-Black;
     color: rgb(170, 170, 170);
+    font-weight: bold;
 }
 
-.sign{
+.buttons-container input:-ms-input-placeholder,input:-ms-input-placeholder {
+    font-weight: bold;
+    color: rgb(170, 170, 170)  !important;
+}
+
+.sign {
     margin-bottom: -2px;
 }
 
@@ -450,6 +541,7 @@ footer div div input::placeholder, header div div input::placeholder, input, sel
 @font-face {
     font-family: Avenir-Black;
     src: url(Fonts/Avenir-Black.woff);
+    font-weight: bold;
 }
 
 .f-bigger {
@@ -462,14 +554,17 @@ footer div div input::placeholder, header div div input::placeholder, input, sel
 
 .f-smaller {
     font-size: 12px;
+    font-weight: bold;
 }
 
 .f-small {
     font-size: 14px;
+    font-weight: bold;
 }
 
 .f-medium {
     font-size: 24px;
+    font-weight: bold;
 }
 
 

@@ -13,17 +13,20 @@
         <div class="f-small buttons-container">
             <a href="index.html" class="logo"></a>
             <select class="product f-small" id="product">
-                <option value="hide">Producten</option>
+                <option disabled selected>Producten</option>
             </select>
             <input class="search f-small" type="text" placeholder="Zoek product">
             <a class="searchLink" href="index.html"></a>
             <input class="button f-small" type="button" value="Excl.BTW">
             <input class="inloggen f-small" type="button" value="   Inloggen">
-            <select class="card"></select>
+            <select class="card">
+                <option disabled selected></option>
+            </select>
         </div>
     </div>
     <div class="f-smaller site-info">
-        <p><img src="Images/like.png" class="sign"> Uitstekende klantenservice <img src="Images/car.png" class="sign"> Gratis levering of afhalen
+        <p><img src="Images/like.png" class="sign"> Uitstekende klantenservice <img src="Images/car.png" class="sign">
+            Gratis levering of afhalen
             in onze shops <img src="Images/phone.png" class="sign"> Gratis
             levering of afhalen in onze shops</p>
     </div>
@@ -56,7 +59,7 @@
                 <div class="block-one">
                     <div>
                         <span class="f-big">Gehoorbescherming 20% korting</span>
-                        <input type="button" value="Bestel nu">
+                        <input type="button" value="Bestel nu" class="f-small">
                     </div>
                     <div class="imageContainer">
                         <img src="Images/headphones.png" class="headphones">
@@ -103,7 +106,7 @@
                 <div class="block-three">
                     <div>
                         <span class="f-medium">Schuurmachines Vanaf € 150,-</span>
-                        <input type="button" value="Bestel nu">
+                        <input type="button" value="Bestel nu" class="f-small">
                     </div>
                     <div class="imageContainer">
                         <img src="Images/sander.png" class="sander">
@@ -112,7 +115,7 @@
                 <div class="block-four">
                     <div>
                         <span class="f-medium">Rookmelders Vanaf € 50,-</span>
-                        <input type="button" value="Bestel nu">
+                        <input type="button" value="Bestel nu" class="f-small">
                     </div>
                     <div class="imageContainer">
                         <img src="Images/smoke%20detectors.png" class="detector">
@@ -211,7 +214,7 @@
 </main>
 <footer>
     <div class="footer-content">
-        <div>
+        <div class="footer-column-1">
             <dl class="f-small">
                 <dt class="f-medium">Over InstallatieBalie.nl</dt>
                 <dd>Waarom InstallatieBalie.nl?</dd>
@@ -221,7 +224,7 @@
                 <dd>Werken bij InstallatieBalie.nl</dd>
             </dl>
         </div>
-        <div>
+        <div class="footer-column-2">
             <dl class="f-small">
                 <dt class="f-medium">Klantenservice</dt>
                 <dd>Bestellen</dd>
@@ -233,15 +236,24 @@
                 <dd>Nieuwsbrief</dd>
             </dl>
         </div>
-        <div>
-            <dl>
+        <div class="footer-column-3">
+            <dl class="f-small">
                 <dt class="f-medium">Nieuwsbrief</dt>
-                <dd><input type="text" placeholder="E-mailadres"></dd>
-                <dd><input type="button" value="Aanmelden"></dd>
+                <dd><input type="text" placeholder="E-mailadres"class="f-small"></dd>
+                <dd ><input class="f-small" type="button" value="Aanmelden"></dd>
             </dl>
         </div>
-        <div>
-            <img src="Images/logo.png">
+        <div class="footer-column-4 footer-logo">
+            <div class="first-logos">
+                <a href="#" class="logo-1"><img class="s-bigger" src="Images/logo1.png"></a>
+                <a class="empty"></a>
+                <a href="#" class="logo-2"><img class="s-smaller" src="Images/logo2.png"></a>
+            </div>
+            <div class="last-logos">
+                <a href="#" class="logo-3"><img class="s-bigger" src="Images/logo3.png"></a>
+                <a class="empty"></a>
+                <a href="#" class="logo-4"><img class="s-smaller" src="Images/logo4.png"></a>
+            </div>
         </div>
     </div>
     <div class="footer-end">
