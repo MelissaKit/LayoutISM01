@@ -7,10 +7,9 @@ html, body {
     padding: 0;
     font-family: Avenir-Black;
     min-width: 100%;
-    font-weight: bold;
 }
 
-.header-wrapper, .main-wrapper, .footer-wrapper{
+.header-wrapper, .main-wrapper, .footer-wrapper-top, .footer-wrapper-bottom{
     padding: 0 25px;
 }
 
@@ -52,7 +51,7 @@ header .top-menu-container {
 }
 
 .hamburger-input, .hamburger{
-    display: none;
+    visibility: hidden;
 }
 
 .top-menu input, .top-menu select {
@@ -62,6 +61,7 @@ header .top-menu-container {
     color: white;
     border: none;
     box-shadow: 0 3px 3px -3px black;
+    box-sizing: border-box;
 }
 
 .top-menu select {
@@ -90,11 +90,23 @@ header .top-menu-container {
     max-width: 150px;
     color: white;
     margin: 0 5px;
+    position: relative;
 }
 
 .top-menu .product-container select.product {
+    padding-right: 15px;
     width: 100%;
-    background: url("Images/arrow.png") black no-repeat 95% center;
+}
+
+.top-menu .product-container div.arrow-img{
+    background: url('Images/sprites.png') -10px -10px transparent no-repeat;
+    width: 100%;
+    max-width: 10px;
+    height: 7px;
+    position: absolute;
+    top:25%;
+    transform: translateY(-50%);
+    right: 5px;
 }
 
 .top-menu .search-container {
@@ -109,29 +121,43 @@ header .top-menu-container {
     width: 100%;
     background-color: white;
     color: black;
-    padding: 10px 0;
+    padding: 10px 25px 10px 5px;
 }
 
 .top-menu .search-container .searchLink {
-    background: url("Images/search.png") transparent no-repeat center;
+    background: url('Images/sprites.png') -182px -10px transparent no-repeat;
     width: 100%;
     max-width: 20px;
     height: 20px;
     position: absolute;
-    left: 93%;
-    top: 10px;
+    top:50%;
+    transform: translateY(-50%);
+    right: 5px;
 }
 
 .top-menu .log-container {
     width: 100%;
     max-width: 90px;
     margin: 0 5px;
+    position: relative;
 }
 
 .top-menu .log-container input.inloggen {
-    background: url("Images/prof.png") white no-repeat 2% center;
+    padding-left: 20px;
     color: black;
     width: 100%;
+    background-color: white;
+}
+
+.top-menu .log-container div.log-img {
+    background: url("Images/sprites.png") -226px -10px transparent no-repeat;
+    width: 100%;
+    max-width: 25px;
+    height: 23px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left: 3px;
 }
 
 .top-menu .btw-container {
@@ -148,16 +174,57 @@ header .top-menu-container {
     width: 100%;
     max-width: 85px;
     margin-left: 5px;
+    position: relative;
 }
 
 .top-menu .card-container select.card {
-    background: url('Images/card.png') 45% center no-repeat, url('Images/arrow.png') black no-repeat 70% 70%;
+    background: black;
     width: 100%;
+}
+
+.top-menu .card-container div.card-img {
+    background: url('Images/sprites.png') transparent -385px -10px no-repeat;
+    width: 100%;
+    max-width: 46px;
+    height: 33px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right :25% ;
+}
+
+.top-menu .card-container div.arrow-card-img{
+    background: url('Images/sprites.png') transparent -10px -10px no-repeat;
+    width: 100%;
+    max-width: 10px;
+    height: 7px;
+    position: absolute;
+    top:70%;
+    transform: translateY(-50%);
+    right :25% ;
 }
 
 .top-menu .header-info {
     width: 100%;
     margin: 8px 0 8px 5px;
+}
+
+body span.car{
+    display: inline-block;
+    width: 17px; height: 14px;
+    background: url('Images/sprites.png') -145px -10px;
+}
+
+body span.phone{
+    display: inline-block;
+    width: 15px; height: 15px;
+    background: url('Images/sprites.png') -74px -10px;
+}
+
+body span.like{
+    display: inline-block;
+    width: 16px; height: 15px;
+    background: url('Images/sprites.png') -109px -10px;
 }
 
 /*      first-block     */
@@ -197,8 +264,6 @@ header .top-menu-container {
 .nav-container {
     display: flex;
     margin: 50px 0 40px 0;
-    width: 100%;
-    max-width: 1110px;
 }
 
 .menu-container {
@@ -208,7 +273,7 @@ header .top-menu-container {
 
 .right-content {
     width: 100%;
-    max-width: 785px;
+    max-width: 1000px;
 }
 
 .right-content .two-block-container-66-33, .two-block-container-50-50 {
@@ -220,11 +285,14 @@ header .top-menu-container {
     background-color: rgb(245, 245, 245);
     border-radius: 2px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .right-content .block-66 {
     max-width: 780px;
     margin-right: 10px;
+    padding: 30px 35px 30px 35px;
+
 }
 
 .right-content .block-33 {
@@ -241,7 +309,7 @@ header .top-menu-container {
 .block-66-items-container div.imageContainer {
     width: 100%;
     max-width: 148px;
-    min-width: 90px;   /*?*/
+    min-width: 90px;
 }
 
 .block-66-items-container div.imageContainer img{
@@ -250,9 +318,7 @@ header .top-menu-container {
 
 .block-66-items-container .infoContainer {
     width: 100%;
-    max-width: 320px;
     align-self: flex-start;
-    margin: 30px 0 30px 35px;
 }
 
 .block-66-items-container .infoContainer input {
@@ -284,7 +350,7 @@ header .top-menu-container {
     display: flex;
 }
 
-.right-content .block-33 span {
+.right-content .block-33 span.title-logo {
     width: 100%;
     display: block;
     padding-top: 10px;
@@ -313,7 +379,7 @@ header .top-menu-container {
 
 .block-50 {
     max-width: 390px;
-    padding: 65px 0 50px 0;
+    padding: 65px 35px 50px 35px;
 }
 
 .two-block-container-50-50 .block-50:first-child {
@@ -339,7 +405,6 @@ header .top-menu-container {
 .block-50 div.infoContainer {
     width: 100%;
     max-width: 200px;
-    margin-left: 35px;
 }
 
 .block-50 input {
@@ -369,12 +434,12 @@ header .top-menu-container {
 }
 
 .slider button.slick-prev {
-    background: url("Images/arrowPrev.png") no-repeat;
+    background: url("Images/sprites.png") -328px -10px no-repeat;
     z-index: 1;
 }
 
 .slider button.slick-next {
-    background: url("Images/arrowNext.png") no-repeat;
+    background: url("Images/sprites.png") -271px -10px no-repeat;
 }
 
 .slider ul {
@@ -424,6 +489,12 @@ header .top-menu-container {
     max-width: 140px;
 }
 
+span.clock{
+    display: inline-block;
+    width: 14px; height: 14px;
+    background: url('Images/sprites.png') -40px -10px;
+}
+
 /*      third-block     */
 .posters-container {
     display: flex;
@@ -435,25 +506,26 @@ header .top-menu-container {
     max-width: 640px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     position: relative;
-    height: 224px;
+    padding: 15px 25px 15px 25px;
+    box-sizing: border-box;
+    min-height: 225px;
+}
+
+.posters-container .f-bigger{
+    line-height: 40px;
 }
 
 .poster .label {
     color: white;
-    margin: 15px 0 0 25px;
-}
-
-.poster .label .f-small{
-    margin-top: -5px;
 }
 
 .poster-one{
-    background: url("Images/Foto2.png") no-repeat center;
+    background: url("Images/Foto2.png") no-repeat top ;
     margin-right: 10px;
 }
 
 .poster-two{
-    background: url("Images/Foto1.png") no-repeat center;
+    background: url("Images/Foto1.png") no-repeat top;
 }
 
 /*      footer      */
@@ -477,40 +549,32 @@ footer .footer-content {
 }
 
 .footer-content .footer-logo {
-    padding-top: 70px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    padding-top: 45px;
 }
 
-div[class^="footer-column"] {
+div.footer-column{
     padding-top: 25px;
-    width: 100%;
 }
 
-.footer-column-1 {
-    max-width: 270px;
-    margin-right: 70px;
+div.footer-column-1 {
+    margin-right: 80px;
 }
 
 .footer-column-2 {
-    max-width: 165px;
-    margin-right: 95px;
+    margin-right: 90px;
 }
 
 .footer-column-3 {
-    max-width: 250px;
-    margin-right: 45px;
+    margin-right: 40px;
 }
 
-.footer-column-4 {
-    max-width: 220px;
+.footer-column-4{
 }
 
 .footer-logo div {
     display: flex;
     width: 100%;
-    justify-content: flex-end;
+    max-width: 215px;
 }
 
 .footer-logo .s-bigger {
@@ -531,22 +595,17 @@ div[class^="footer-column"] {
     padding-bottom: 10px;
 }
 
-.footer-column-3 dl, .footer-column-3 dd {
-    width: 100%;
-}
-
 .footer-column-3 input {
-    padding: 15px 0px;
+    padding: 15px 5px;
+    box-sizing: border-box;
     border: none;
     border-radius: 3px;
-    width: 100%;
-    max-width: 250px;
     margin-bottom: 10px;
+    width:250px;
 }
 
 .footer-column-3 input[type="button"] {
-    width: 100%;
-    max-width: 250px;
+    padding: 15px 85px;
     color: white;
     background-color: black;
 }
@@ -576,12 +635,12 @@ footer .footer-end {
 footer input::placeholder, header input::placeholder, input, select {
     font-family: Avenir-Black;
     color: rgb(170, 170, 170);
-    font-weight: bold;
-    padding: 5px;
+    /*font-weight: bold;*/
+    /*padding: 5px;*/
 }
 
 .top-menu-items input:-ms-input-placeholder, input:-ms-input-placeholder {
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: rgb(170, 170, 170) !important;
 }
 
@@ -594,7 +653,6 @@ footer input::placeholder, header input::placeholder, input, select {
 @font-face {
     font-family: Avenir-Black;
     src: url(Fonts/Avenir-Black.woff);
-    font-weight: bold;
 }
 
 .f-bigger {
@@ -607,27 +665,28 @@ footer input::placeholder, header input::placeholder, input, select {
 
 .f-smaller {
     font-size: 12px;
-    font-weight: bold;
+   /* font-weight: bold;*/
 }
 
 .f-small {
     font-size: 14px;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 .f-medium {
     font-size: 24px;
-    font-weight: bold;
+   /* font-weight: bold;*/
 }
 
 @media only screen and (max-width: 1023px ){
+
     .two-block-container-66-33, .two-block-container-50-50, .posters-container{
         flex-direction: column;
         justify-content: center;
     }
 
-    .two-block-container-66-33 .infoContainer{
-        margin: 30px 10px;
+    .two-block-container-66-33, .block-66 .infoContainer span.f-big{
+        font-size:4vw;
     }
 
     .right-content .block-50, .right-content .block-66, .right-content .block-33{
@@ -636,7 +695,6 @@ footer input::placeholder, header input::placeholder, input, select {
 
     .block-50-items-container{
         justify-content: center;
-
     }
 
     .right-content .block-33{
@@ -647,6 +705,8 @@ footer input::placeholder, header input::placeholder, input, select {
 
     .poster{
         margin:0;
+        max-width: 1100px;
+        text-align: center;
     }
 
     .right-content .block-50:last-child, .posters-container .poster-two{
@@ -659,32 +719,45 @@ footer input::placeholder, header input::placeholder, input, select {
 
     .footer-content{
         flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    div[class^="footer-column"] {
-        width: 100%;
-        max-width: 270px;
-        margin: 0;
     }
 
     .card-container, .btw-container, .product-container, .header-info{
         display: none;
     }
 
-    .footer-logo div{
-        justify-content: flex-start;
+    div.footer-column{
+        flex-basis: 50%;
+        margin: 0;
+    }
+
+    div.footer-column:nth-child(even){
+        position: relative;
+    }
+
+    div.footer-column:nth-child(even)>div{
+        position: absolute;
+        right: 0;
     }
 }
 
 @media only screen and (max-width: 639px ){
 
-    .menu-container{
-        display: unset;
+    .two-block-container-66-33, .block-66 .infoContainer span.f-big{
+        font-size:5vw;
     }
 
-    .top-menu .search-container .searchLink {
-        left: 85%;
+    div.footer-column{
+        flex-basis: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    div.footer-logo{
+        display: inline-block;
+    }
+
+    div.footer-column:nth-child(even)>div{
+        position: inherit;
     }
 
     .end-content{
@@ -697,7 +770,7 @@ footer input::placeholder, header input::placeholder, input, select {
     }
 
     .hamburger-input, .hamburger{
-        display: unset;
+        visibility: visible;
     }
 
     .left-side-menu a
@@ -711,9 +784,7 @@ footer input::placeholder, header input::placeholder, input, select {
         position: relative;
         top: 0;
         left: -10px;
-
         z-index: 1;
-
         -webkit-user-select: none;
         user-select: none;
     }

@@ -20,6 +20,7 @@
                         <select class="product f-small" id="product">
                             <option disabled selected>Producten</option>
                         </select>
+                        <div class="arrow-img"></div>
                     </div>
                     <div class="items-block-container">
                         <div class="top-menu-items-block">
@@ -33,23 +34,24 @@
                                         <input class="f-small" type="button" value="Excl.BTW">
                                     </div>
                                     <div class="log-container">
-                                        <input class="inloggen f-small" type="button" value="   Inloggen">
+                                        <input class="inloggen f-small" type="button" value="Inloggen">
+                                        <div class="log-img"></div>
                                     </div>
                                     <div class="card-container">
                                         <select class="card">
                                             <option disabled selected></option>
                                         </select>
+                                        <div class="card-img"></div>
+                                        <div class="arrow-card-img"></div>
                                     </div>
                                 </div>
                             </div>
                             <div class="items-column">
                                 <div class="items-row">
                                     <div class="f-small header-info">
-                                        <img src="Images/like.png" class="sign"> Uitstekende klantenservice <img
-                                            src="Images/car.png"
-                                            class="sign">
+                                        <span class="sign like"></span> Uitstekende klantenservice <span class="sign car"></span>
                                         Gratis levering of afhalen
-                                        in onze shops <img src="Images/phone.png" class="sign"> Gratis
+                                        in onze shops <span class="sign phone"></span> Gratis
                                         levering of afhalen in onze shops
                                     </div>
                                 </div>
@@ -113,7 +115,7 @@
                                 </div>
                             </div>
                             <div class="text-block">
-                                <span><img src="Images/clock%20.png" class="sign"> Openingstijden:</span>
+                                <span class="title-logo"><span class="sign clock"></span> Openingstijden:</span>
                                 <div class="schedule">
                                     <ul>
                                         <li>Ma-Vr</li>
@@ -126,7 +128,7 @@
                                 </div>
                             </div>
                             <div class="text-block">
-                                <span><img src="Images/phone.png" class="sign"> Telefonisch bereikbaar:</span>
+                                <span class="title-logo"><span class="sign phone"></span> Telefonisch bereikbaar:</span>
                                 <div class="schedule">
                                     <ul>
                                         <li>Ma-Vr</li>
@@ -261,50 +263,58 @@
     </main>
 </div>
 <footer>
-    <div class="footer-wrapper">
+    <div class="footer-wrapper-top">
         <div class="footer-content">
-            <div class="footer-column-1">
-                <dl class="f-small">
-                    <dt class="f-medium">Over InstallatieBalie.nl</dt>
-                    <dd><a href="#">Waarom InstallatieBalie.nl?</a></dd>
-                    <dd><a href="#">Assortiment</a></dd>
-                    <dd><a href="#">Zakelijke klanten</a></dd>
-                    <dd><a href="#">Nieuws</a></dd>
-                    <dd><a href="#">Werken bij InstallatieBalie.nl</a></dd>
-                </dl>
-            </div>
-            <div class="footer-column-2">
-                <dl class="f-small">
-                    <dt class="f-medium">Klantenservice</dt>
-                    <dd><a href="#">Bestellen</a></dd>
-                    <dd><a href="#">Betalen</a></dd>
-                    <dd><a href="#">Retourneren</a></dd>
-                    <dd><a href="#">Bezorgen</a></dd>
-                    <dd><a href="#">Afhalen</a></dd>
-                    <dd><a href="#">Contact</a></dd>
-                    <dd><a href="#">Nieuwsbrief</a></dd>
-                </dl>
-            </div>
-            <div class="footer-column-3">
-                <dl class="f-small">
-                    <dt class="f-medium">Nieuwsbrief</dt>
-                    <dd><input type="text" placeholder="E-mailadres" class="f-small"></dd>
-                    <dd><input class="f-small" type="button" value="Aanmelden"></dd>
-                </dl>
-            </div>
-            <div class="footer-column-4 footer-logo">
-                <div class="first-logos logo-row">
-                    <a href="#" class="logo-1"><img class="s-bigger" src="Images/logo1.png"></a>
-                    <a href="#" class="logo-2"><img class="s-smaller" src="Images/logo2.png"></a>
+            <div class="footer-column-1 footer-column">
+                <div>
+                    <dl class="f-small">
+                        <dt class="f-medium">Over InstallatieBalie.nl</dt>
+                        <dd><a href="#">Waarom InstallatieBalie.nl?</a></dd>
+                        <dd><a href="#">Assortiment</a></dd>
+                        <dd><a href="#">Zakelijke klanten</a></dd>
+                        <dd><a href="#">Nieuws</a></dd>
+                        <dd><a href="#">Werken bij InstallatieBalie.nl</a></dd>
+                    </dl>
                 </div>
-                <div class="last-logos logo-row">
-                    <a href="#" class="logo-3"><img class="s-bigger" src="Images/logo3.png"></a>
-                    <a href="#" class="logo-4"><img class="s-smaller" src="Images/logo4.png"></a>
+            </div>
+            <div class="footer-column-2 footer-column">
+                <div>
+                    <dl class="f-small">
+                        <dt class="f-medium">Klantenservice</dt>
+                        <dd><a href="#">Bestellen</a></dd>
+                        <dd><a href="#">Betalen</a></dd>
+                        <dd><a href="#">Retourneren</a></dd>
+                        <dd><a href="#">Bezorgen</a></dd>
+                        <dd><a href="#">Afhalen</a></dd>
+                        <dd><a href="#">Contact</a></dd>
+                        <dd><a href="#">Nieuwsbrief</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="footer-column-3 footer-column">
+                <div class="">
+                    <dl class="f-small">
+                        <dt class="f-medium">Nieuwsbrief</dt>
+                        <dd><input type="text" placeholder="E-mailadres" class="f-small"></dd>
+                        <dd><input class="f-small" type="button" value="Aanmelden"></dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="footer-column-4 footer-column">
+                <div class="footer-logo">
+                    <div class="first-logos logo-row">
+                        <a href="#" class="logo-1"><img class="s-bigger" src="Images/logo1.png"></a>
+                        <a href="#" class="logo-2"><img class="s-smaller" src="Images/logo2.png"></a>
+                    </div>
+                    <div class="last-logos logo-row">
+                        <a href="#" class="logo-3"><img class="s-bigger" src="Images/logo3.png"></a>
+                        <a href="#" class="logo-4"><img class="s-smaller" src="Images/logo4.png"></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="footer-wrapper last">
+    <div class="footer-wrapper-bottom last">
         <div class="footer-end">
             <div class="end-content">
                 <div>
