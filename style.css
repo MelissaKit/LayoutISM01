@@ -54,6 +54,10 @@ header .top-menu-container {
     visibility: hidden;
 }
 
+input, select{
+    font-family: Avenir-Black;
+}
+
 .top-menu input, .top-menu select {
     padding: 10px 5px;
     border-radius: 2px;
@@ -79,6 +83,7 @@ header .top-menu-container {
     width: 100%;
     max-width: 155px;
     margin-right: 10px;
+    min-width: 85px;
 }
 
 .top-menu .logo-container a, .top-menu .logo-container img {
@@ -111,7 +116,7 @@ header .top-menu-container {
 
 .top-menu .search-container {
     max-width: 900px;
-    min-width: 80px;
+    min-width: 75px;
     width: 100%;
     position: relative;
     margin: 0 5px;
@@ -520,6 +525,7 @@ span.clock {
 }
 
 .poster .label {
+    word-wrap: break-word;
     color: white;
 }
 
@@ -688,8 +694,13 @@ footer input::placeholder, header input::placeholder, input, select {
         justify-content: center;
     }
 
-    .two-block-container-66-33, .block-66 .infoContainer span.f-big {
-        font-size: 4vw;
+    .two-block-container-66-33, .block-66 .infoContainer span.f-big, .two-block-container-50-50 .block-50 .infoContainer span {
+        font-size: 5vw;
+    }
+
+    .two-block-container-50-50 .block-50 .imageContainer{
+        min-width: 80px;
+        padding: 10px;
     }
 
     .right-content .block-50, .right-content .block-66, .right-content .block-33 {
@@ -704,6 +715,10 @@ footer input::placeholder, header input::placeholder, input, select {
         padding-left: 0;
         text-align: center;
         margin-top: 10px;
+    }
+
+    .slider .text ul li.f-bigger{
+        font-size: 10vw;
     }
 
     .poster {
@@ -728,6 +743,10 @@ footer input::placeholder, header input::placeholder, input, select {
         display: none;
     }
 
+    .top-menu-items-container{
+        margin-bottom: 10px;
+    }
+
     div.footer-column {
         flex-basis: 50%;
         margin: 0;
@@ -745,8 +764,24 @@ footer input::placeholder, header input::placeholder, input, select {
 
 @media only screen and (max-width: 639px ) {
 
+    .calendar-block{
+        padding-left: 10px;
+    }
+
     .two-block-container-66-33, .block-66 .infoContainer span.f-big {
         font-size: 5vw;
+    }
+
+    .right-content .infoContainer input {
+        font-size: 4vw;
+    }
+
+    .right-content .block-66 {
+        padding: 30px 15px 30px 15px;
+    }
+
+    .right-content .block-66 .imageContainer{
+        min-width: 60px;
     }
 
     div.footer-column {
