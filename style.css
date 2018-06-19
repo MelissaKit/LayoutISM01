@@ -781,21 +781,19 @@ footer input::placeholder, header input::placeholder, input, select {
         padding-left: 10px;
     }
 
-    .two-block-container-66-33, .block-66 .infoContainer span.f-big {
+    .right-content .block-66 .infoContainer span.f-big  {
         font-size: 5vw;
     }
 
-    .right-content .infoContainer input {
-        font-size: 4vw;
-    }
 
-    .two-block-container-66-33, .block-66 .infoContainer span.f-big, .two-block-container-50-50 .block-50 .infoContainer span {
+
+    .two-block-container-50-50 .block-50 .infoContainer span {
         font-size: 5vw;
     }
 
 
     .slider .text ul li.f-bigger{
-        font-size: 10vw;
+        font-size: 8vw;
     }
 
     .right-content .block-66 {
