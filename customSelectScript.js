@@ -9,14 +9,17 @@ $( function() {
             }
 
             $( "<span>", {
-                style: item.element.attr( "data-style" ),
-                "class": "ui-icon " + item.element.attr( "data-class" )
+                class: "ui-icon "
             }).appendTo( wrapper );
 
             return li.append( wrapper ).appendTo( ul );
         }
     });
 
-    $( "#product" ).iconselectmenu().iconselectmenu( "menuWidget").addClass( "ui-menu-icons optionImage" );
+    $( "#product" ).iconselectmenu({
+    classes: {
+        "ui-selectmenu-menu": "ui-menu-icons optionImage"
+    }
+    });
 
 } );

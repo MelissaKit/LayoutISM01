@@ -48,6 +48,7 @@ header .top-menu-container {
 .items-row {
     display: flex;
     width: 100%;
+    align-items: center;
 }
 
 .hamburger-input, .hamburger {
@@ -58,7 +59,7 @@ input, select{
     font-family: Avenir-Black;
 }
 
-.top-menu input, .top-menu select {
+.top-menu a.but, .top-menu select ,.top-menu input{
     padding: 10px 5px;
     border-radius: 2px;
     background-color: black;
@@ -80,14 +81,12 @@ input, select{
 }
 
 .top-menu .logo-container {
-    width: 100%;
-    max-width: 155px;
     margin-right: 10px;
-    min-width: 85px;
 }
 
 .top-menu .logo-container a, .top-menu .logo-container img {
-    width: 100%;
+    width: 154px;
+    height: 46px;
 }
 
 .top-menu .product-container {
@@ -115,9 +114,9 @@ input, select{
 }
 
 .top-menu .search-container {
-    max-width: 900px;
-    min-width: 75px;
-    width: 100%;
+    min-width: 65px;
+    flex-basis: 65%;
+    flex-grow: 2;
     position: relative;
     margin: 0 5px;
 }
@@ -141,43 +140,38 @@ input, select{
 }
 
 .top-menu .log-container {
-    width: 100%;
-    max-width: 90px;
     margin: 0 5px;
     position: relative;
 }
 
-.top-menu .log-container input.inloggen {
-    padding-left: 20px;
+.top-menu .log-container a.inloggen {
     color: black;
+    padding-left: 25px;
     width: 100%;
     background-color: white;
+
 }
 
 .top-menu .log-container div.log-img {
     background: url("Images/sprites.png") -226px -10px transparent no-repeat;
-    width: 100%;
-    max-width: 25px;
     height: 23px;
+    width:25px ;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 3px;
 }
 
 .top-menu .btw-container {
-    width: 100%;
-    max-width: 85px;
     margin: 0 5px;
 }
 
-.top-menu .btw-container input {
+.top-menu .btw-container a {
     width: 100%;
+    padding: 10px 10px;
 }
 
 .top-menu .card-container {
-    width: 100%;
-    max-width: 85px;
+    width: 85px;
     margin-left: 5px;
     position: relative;
 }
@@ -292,19 +286,18 @@ body span.like {
 .block-66, .block-33, .block-50 {
     background-color: rgb(245, 245, 245);
     border-radius: 2px;
-    width: 100%;
     box-sizing: border-box;
 }
 
 .right-content .block-66 {
-    max-width: 780px;
+    flex-basis: 66.66%;
     margin-right: 10px;
     padding: 30px 35px 30px 35px;
 
 }
 
 .right-content .block-33 {
-    max-width: 255px;
+    flex-basis: 33.33%;
     padding: 15px 0 35px 35px;
 }
 
@@ -315,8 +308,7 @@ body span.like {
 }
 
 .block-66-items-container div.imageContainer {
-    width: 100%;
-    max-width: 148px;
+    flex-basis: 33.33%;
     min-width: 90px;
 }
 
@@ -325,7 +317,7 @@ body span.like {
 }
 
 .block-66-items-container .infoContainer {
-    width: 100%;
+    flex-basis: 66.66%;
     align-self: flex-start;
 }
 
@@ -386,7 +378,7 @@ body span.like {
 }
 
 .block-50 {
-    max-width: 390px;
+    flex-basis: 66%;
     padding: 65px 35px 50px 35px;
 }
 
@@ -394,25 +386,26 @@ body span.like {
     margin-right: 10px;
 }
 
-.block-50 div.image-50-first {
-    width: 100%;
-    max-width: 121px;
-    min-width: 110px;
-}
-
-.block-50 div.image-50-second {
-    width: 100%;
-    max-width: 94px;
-    min-width: 75px;
-}
-
-.block-50 div.imageContainer img, .block-50 div.infoContainer .text-block {
-    width: 100%;
+.block-50 div.imageContainer {
+    flex-basis: 38%;
+    min-width: 90px;
 }
 
 .block-50 div.infoContainer {
+    flex-basis: 62%;
+}
+
+.block-50 .imageContainer>img{
     width: 100%;
-    max-width: 200px;
+    float: right;
+}
+
+.block-50 .image-50-first>img{
+    max-width: 121px;
+}
+
+.block-50 .image-50-second>img{
+    max-width: 94px;
 }
 
 .block-50 input {
@@ -688,14 +681,21 @@ footer input::placeholder, header input::placeholder, input, select {
 }
 
 @media only screen and (max-width: 1023px ) {
+    .block-50 div.imageContainer {
+        flex-basis: 33%;
+    }
+
+    .block-50 div.infoContainer {
+        flex-basis: 67%;
+    }
 
     .two-block-container-66-33, .two-block-container-50-50, .posters-container {
         flex-direction: column;
         justify-content: center;
     }
 
-    .two-block-container-66-33, .block-66 .infoContainer span.f-big, .two-block-container-50-50 .block-50 .infoContainer span {
-        font-size: 5vw;
+    .right-content .two-block-container-66-33>div, .right-content .two-block-container-50-50>div.block-50{
+        margin-right: 0px;
     }
 
     .two-block-container-50-50 .block-50 .imageContainer{
@@ -704,7 +704,11 @@ footer input::placeholder, header input::placeholder, input, select {
     }
 
     .right-content .block-50, .right-content .block-66, .right-content .block-33 {
-        max-width: 1000px;
+        flex-basis: auto;
+    }
+
+    .right-content .block-66 .infoContainer span.f-big{
+        font-size: 4vw;
     }
 
     .block-50-items-container {
@@ -715,10 +719,6 @@ footer input::placeholder, header input::placeholder, input, select {
         padding-left: 0;
         text-align: center;
         margin-top: 10px;
-    }
-
-    .slider .text ul li.f-bigger{
-        font-size: 10vw;
     }
 
     .poster {
@@ -763,6 +763,19 @@ footer input::placeholder, header input::placeholder, input, select {
 }
 
 @media only screen and (max-width: 639px ) {
+    .header-wrapper{
+        padding: 0 10px;
+    }
+
+    .top-menu .logo-container{
+        margin: 0 5px;
+    }
+
+    .top-menu .logo-container a, .top-menu .logo-container img {
+        width: 100px;
+        height: auto;
+    }
+
 
     .calendar-block{
         padding-left: 10px;
@@ -774,6 +787,15 @@ footer input::placeholder, header input::placeholder, input, select {
 
     .right-content .infoContainer input {
         font-size: 4vw;
+    }
+
+    .two-block-container-66-33, .block-66 .infoContainer span.f-big, .two-block-container-50-50 .block-50 .infoContainer span {
+        font-size: 5vw;
+    }
+
+
+    .slider .text ul li.f-bigger{
+        font-size: 10vw;
     }
 
     .right-content .block-66 {
@@ -858,32 +880,32 @@ footer input::placeholder, header input::placeholder, input, select {
         opacity 0.55s ease;
     }
 
-    span.hamburger:first-child {
+    .left-side-menu span.hamburger:first-child {
         transform-origin: 0% 0%;
     }
 
-    span.hamburger:nth-last-child(2) {
+    .left-side-menu span.hamburger:nth-child(3) {
         transform-origin: 0% 100%;
     }
 
-    .left-side-menu input:checked ~ span {
+    .left-side-menu input:checked ~ .hamburger {
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
         background: #232323;
     }
 
-    .left-side-menu input:checked ~ span:nth-last-child(3) {
+    .left-side-menu input:checked ~ .hamburger:nth-child(3) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+
+    .left-side-menu input:checked ~ .hamburger:nth-last-child(3) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
     }
 
-    .left-side-menu input:checked ~ span:nth-last-child(2) {
-        transform: rotate(-45deg) translate(0, -1px);
-    }
 
     .left-side-menu .menu {
         position: absolute;
-        width: 300px;
         padding: 50px;
 
         background: #ededed;

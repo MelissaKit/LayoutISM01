@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <header>
@@ -17,7 +18,7 @@
                     <div class="logo-container">
                         <a href="index.html" class="logo"><img src="Images/menu-logo.png"></a>
                     </div>
-                    <div class="product-container">
+                    <div class="product-container but-container">
                         <select class="product f-small" id="product">
                             <option disabled selected>Producten</option>
                             <option value="myimage" data-class="image">text</option>
@@ -28,18 +29,18 @@
                         <div class="top-menu-items-block">
                             <div class="items-column">
                                 <div class="items-row">
-                                    <div class="search-container">
-                                        <input class="searchField f-small" type="text" placeholder="Zoek product">
+                                    <div class="search-container but-container">
+                                        <input class="searchField f-small but" type="text" placeholder="Zoek product">
                                         <a class="searchLink" href="index.html"></a>
                                     </div>
-                                    <div class="btw-container">
-                                        <input class="f-small" type="button" value="Excl.BTW">
+                                    <div class="btw-container but-container">
+                                        <a class="f-small but">Excl.BTW</a>
                                     </div>
-                                    <div class="log-container">
-                                        <input class="inloggen f-small" type="button" value="Inloggen">
+                                    <div class="log-container but-container">
+                                        <a class="inloggen f-small but">Inloggen</a>
                                         <div class="log-img"></div>
                                     </div>
-                                    <div class="card-container">
+                                    <div class="card-container but-container">
                                         <select class="card">
                                             <option disabled selected></option>
                                         </select>
@@ -75,7 +76,7 @@
                         <span class="hamburger"></span>
                         <span class="hamburger"></span>
                         <span class="hamburger"></span>
-                        <p class="calendar-block">Date:<input type="text" id="datepicker"/></p>
+                        <p class="calendar-block">Date:<input type="text" readonly id="datepicker"/></p>
                         <div id="dialog"><p id="dialogText"></p></div>
                         <ul class="f-small menu">
                             <li><a href="#">Behuizinger</a></li>
